@@ -1,7 +1,7 @@
 {
   "expo": {
-    "name": "secure-todo",
-    "slug": "secure-todo",
+    "name": "secure-notes",
+    "slug": "secure-notes",
     "version": "1.0.0",
     "orientation": "portrait",
     "icon": "./assets/images/icon.png",
