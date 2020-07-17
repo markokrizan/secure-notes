@@ -6,14 +6,19 @@ export default {
     screens: {
       Root: {
         screens: {
-          TabOne: {
+          Notes: {
             screens: {
-              TabOneScreen: 'one',
+              Notes: 'notes',
             },
           },
-          TabTwo: {
+          Note: {
             screens: {
-              TabTwoScreen: 'two',
+              Note: 'note',
+            },
+          },
+          Settings: {
+            screens: {
+              Settings: 'note',
             },
           },
         },
