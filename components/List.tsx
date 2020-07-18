@@ -2,16 +2,15 @@ import * as React from 'react';
 import { View } from 'react-native';
 
 import ListItem from './ListItem';
-import { ListItemData } from '../types';
 
-export default function List ({ items, pressHandler } : { items : any, pressHandler : () => void}) {
+const List = ({ children } : { children : any }) => {
     return (
         <View>
-            {
-                items && items.length && items.map((item : ListItemData) => (
-                    <ListItem item={item} pressHandler={pressHandler} /> 
-                ))
-            }
+            {children}
         </View>
-    );
+    )
 }
+
+List.Item = ListItem;
+
+export default List;

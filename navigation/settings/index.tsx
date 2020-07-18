@@ -2,11 +2,9 @@ import * as React from 'react';
 import { createStackNavigator } from '@react-navigation/stack';
 
 import Settings from '../../screens/Settings';
-import NavigationButton from '../../components/NavigationButton';
+import { HeaderBackButton } from '@react-navigation/stack';
 
 const {Navigator, Screen} = createStackNavigator<any>();
-
-import { NOTES_SCREEN } from '../../constants/screens';
 
 export default function SettingsStackNavigator() {
   return (
@@ -16,10 +14,7 @@ export default function SettingsStackNavigator() {
         component={Settings}
         options={({ navigation, route }) => ({
           headerTitle: route.name,
-          
-          //TODO: check issue status and use goBack when possible
-          //https://github.com/react-navigation/react-navigation/issues/6434 
-          headerLeft: () => <NavigationButton pressHandler={() => navigation.replace(NOTES_SCREEN)} title={NOTES_SCREEN} />,
+          headerLeft: () => <HeaderBackButton onPress={()=>{ navigation.goBack() }}/>  
         })}
       />
     </Navigator>

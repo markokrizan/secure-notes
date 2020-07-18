@@ -1,17 +1,16 @@
 import * as React from 'react';
 
-import { ListItem } from 'react-native-elements';
-import { ListItemData } from '../types';
+import { ListItem as MaterialListItem } from 'react-native-elements';
 
-export default function List ({ item, pressHandler } : { item : ListItemData, pressHandler : () => void }) {
+export default function ListItem ({ item, pressHandler } : { item : any, pressHandler : () => void }) {
     return (
-        <ListItem
+        <MaterialListItem
             key={item.id}
             leftAvatar={{ source: { uri: item.leftAvatarSource } }}
             title={item.title}
             subtitle={item.subtitle}
-            bottomDivider={item.bottomDivider}
             onPress={pressHandler}
+            bottomDivider
         />
     )
 }

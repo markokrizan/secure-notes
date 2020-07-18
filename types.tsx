@@ -5,10 +5,8 @@ export type RootStackParamList = {
   NotFound: undefined;
 };
 
-export type ListItemData = {
+export type Note = {
   id : number,
   title : string,
-  subtitle : string | undefined,
-  bottomDivider: boolean,
-  leftAvatarSource: string
+  subtitle : string | undefined
 }
